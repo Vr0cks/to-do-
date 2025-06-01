@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Modern font ve stil dosyası -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>To Do Listesi</title>
+  </head>
+  <body>
+  <!-- Dil seçici -->
+  <select id="langSelect" class="lang-select">
+    <option value="tr">Türkçe</option>
+    <option value="en">English</option>
+  </select>
+  <!-- Ana To Do kartı -->
+  <section class="todo">
+    <h1 id="title">To Do Listesi</h1>
+    <!-- Görev ekleme alanı -->
+    <form id="todo-form" autocomplete="off">
+      <input
+        type="text"
+        class="input-field"
+        id="todoInput"
+        placeholder="Yapılacak bir şey ekle..."
+        required
+      />
+      <input
+        type="datetime-local"
+        id="todo-date"
+        class="date-field"
+        placeholder="Tarih/Saat"
+      />
+      <button class="btn" type="submit" id="addBtn">Ekle</button>
+    </form>
+    <!-- Görevler listesi -->
+    <ul class="scroll" id="todoList"></ul>
+    <!-- Sayaç ve toplu silme -->
+    <div>
+      <hr class="counter" />
+      <div class="counter-container">
+        <p><span id="todoCount">0</span> <span id="taskText"></span></p>
+        <button id="deleteButton" type="button">Tümünü Sil</button>
+      </div>
+    </div>
+  </section>
+  <footer class="footer-fixed" id="footerText">
+    Hazırlayan <b>Yiğit (vRocks)</b>
+  </footer>
+</body>
+</html>
